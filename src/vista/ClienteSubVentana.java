@@ -1,23 +1,20 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.util.ArrayList;
 
 import javax.swing.JInternalFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollBar;
-
-import java.awt.BorderLayout;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
-import javax.swing.JScrollPane;
-import java.awt.Color;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.JTableHeader;
 
 import entidades.ClienteEntidad;
 import modelo.Empresa;
-
 import utilidades.*;
 
 public class ClienteSubVentana extends JInternalFrame {
@@ -171,6 +168,7 @@ public class ClienteSubVentana extends JInternalFrame {
 		// se asigna la tabla al scrollPane
 		scrollPane.setViewportView(tablaClientes);
 
+		
 		JScrollBar vertical = scrollPane.getVerticalScrollBar();
 		vertical.setValue(vertical.getMaximum());
 
