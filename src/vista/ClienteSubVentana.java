@@ -22,6 +22,7 @@ public class ClienteSubVentana extends JInternalFrame {
 	private ArrayList<ClienteEntidad> listaClientes;
 	private ModeloTabla modelo;
 	private JScrollPane scrollPane;
+	private Empresa empresa;
 
 	/**
 	 * Launch the application.
@@ -71,7 +72,7 @@ public class ClienteSubVentana extends JInternalFrame {
 
 	private void construirTabla() {
 		// llamamos
-		Empresa empresa = new Empresa();
+		empresa = new Empresa();
 		listaClientes = empresa.mostrarDatosCliente();
 		// utiliza el metodo compareTo implementado en personaEntidad
 		// listaPersonas.sort(null);
