@@ -75,7 +75,7 @@ public class ClienteSubVentana extends JInternalFrame {
 		empresa = new Empresa();
 		listaClientes = empresa.mostrarDatosCliente();
 		// utiliza el metodo compareTo implementado en personaEntidad
-		// listaPersonas.sort(null);
+		listaClientes.sort(null);
 		// listaPersonas.sort(new OrdenarPersonaEdad());
 		// listaPersonas.sort(new OrdenarPersonaEdadId());
 		/*
