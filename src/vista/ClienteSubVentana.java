@@ -15,6 +15,7 @@ import javax.swing.table.JTableHeader;
 
 import entidades.ClienteEntidad;
 import modelo.Empresa;
+import ordenar.ClienteIdEdadDesc;
 import utilidades.*;
 
 public class ClienteSubVentana extends JInternalFrame {
@@ -75,7 +76,10 @@ public class ClienteSubVentana extends JInternalFrame {
 		empresa = new Empresa();
 		listaClientes = empresa.mostrarDatosCliente();
 		// utiliza el metodo compareTo implementado en personaEntidad
-		listaClientes.sort(null);
+		// listaClientes.sort(null);
+		listaClientes.sort(new ClienteIdEdadDesc());
+		
+
 		// listaPersonas.sort(new OrdenarPersonaEdad());
 		// listaPersonas.sort(new OrdenarPersonaEdadId());
 		/*
@@ -169,7 +173,6 @@ public class ClienteSubVentana extends JInternalFrame {
 		// se asigna la tabla al scrollPane
 		scrollPane.setViewportView(tablaClientes);
 
-		
 		JScrollBar vertical = scrollPane.getVerticalScrollBar();
 		vertical.setValue(vertical.getMaximum());
 
